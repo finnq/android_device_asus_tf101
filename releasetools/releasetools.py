@@ -1,4 +1,4 @@
-# Copyright (C) 2012 The Android Open Source Project
+# Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,11 +15,8 @@
 import common
 import os, sys
 
-LOCAL_DIR = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
-DEV_OUT_DIR = os.path.abspath(os.path.join(LOCAL_DIR, '../../../out/target/product/tf101/'))
-
 def FullOTA_InstallEnd(info):
-  blob_path = os.path.join(DEV_OUT_DIR, "boot.img.LNX")
+  blob_path = os.path.join(os.getenv('OUT'), "boot.img.LNX")
   try:
     tegra_blob = common.File.FromLocalFile("boot.blob", blob_path)
   except KeyError:

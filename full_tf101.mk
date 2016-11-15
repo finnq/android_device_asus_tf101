@@ -1,4 +1,4 @@
-# Copyright (C) 2011 The Android Open Source Project
+# Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,30 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Camera
-PRODUCT_PACKAGES := \
-	HoloSpiralWallpaper \
-	LiveWallpapersPicker \
-	VisualizationWallpapers \
-
-PRODUCT_PACKAGES += \
-    	Camera
-
 # Inherit full-base
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Inherit from toro device
-$(call inherit-product, device/asus/tf101/device_tf101.mk)
-
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
-
-# Enable xhdpi drawables while keeping mdpi as primary source
-PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+# Inherit from device
+$(call inherit-product, device/asus/tf101/device.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_tf101
 PRODUCT_DEVICE := tf101
+PRODUCT_NAME := full_tf101
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Transformer
