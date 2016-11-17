@@ -68,6 +68,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Recovery Options
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.ventana
 
+# Sensors
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
 
