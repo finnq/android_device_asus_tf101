@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
 	$(LOCAL_PATH)/configs/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
 
+# hwcomposer
+PRODUCT_PACKAGES += \
+	hwcomposer.tegra
+
 # Media
 PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
