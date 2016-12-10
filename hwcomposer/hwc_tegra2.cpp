@@ -28,9 +28,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#if HAVE_ANDROID_OS
 #include <linux/fb.h>
-#endif
 
 #include <sys/ioctl.h>
 #include <sys/mman.h>
